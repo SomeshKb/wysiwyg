@@ -119,6 +119,46 @@
           }
         }
       }
+    },
+    "wysiwyg-editor": {
+      "projectType": "library",
+      "root": "projects/wysiwyg-editor",
+      "sourceRoot": "projects/wysiwyg-editor/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/wysiwyg-editor/tsconfig.lib.json",
+            "project": "projects/wysiwyg-editor/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/wysiwyg-editor/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/wysiwyg-editor/src/test.ts",
+            "tsConfig": "projects/wysiwyg-editor/tsconfig.spec.json",
+            "karmaConfig": "projects/wysiwyg-editor/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/wysiwyg-editor/tsconfig.lib.json",
+              "projects/wysiwyg-editor/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "wysiwyg"
 }

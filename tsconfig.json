@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "wysiwyg-editor": [
+        "dist/wysiwyg-editor/wysiwyg-editor",
+        "dist/wysiwyg-editor"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
